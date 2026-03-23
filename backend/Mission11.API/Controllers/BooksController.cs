@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Mission11.API.Data;
 
@@ -18,7 +18,8 @@ namespace Mission11.API.Controllers
         [HttpGet]
         public async Task<ActionResult<PagedResult<Books>>> GetBooks(
             [FromQuery] int pageNumber = 1,
-            [FromQuery] int pageSize = 5)
+            [FromQuery] int pageSize = 5,
+            [FromQuery] string? category = null)
         {
             if (pageNumber < 1)
             {
@@ -35,7 +36,14 @@ namespace Mission11.API.Controllers
                 pageSize = maxPageSize;
             }
 
-            var query = _context.Books.AsNoTracking().OrderBy(b => b.BookID);
+            var query = _context.Books.AsNoTracking().AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                query = query.Where(b => b.Category == category);
+            }
+
+            query = query.OrderBy(b => b.BookID);
 
             var totalCount = await query.CountAsync();
 
@@ -53,6 +61,20 @@ namespace Mission11.API.Controllers
             };
 
             return Ok(result);
+        }
+
+        [HttpGet("categories")]
+        public async Task<ActionResult<IReadOnlyList<string>>> GetCategories()
+        {
+            var categories = await _context.Books
+                .AsNoTracking()
+                .Select(b => b.Category)
+                .Where(c => !string.IsNullOrWhiteSpace(c))
+                .Distinct()
+                .OrderBy(c => c)
+                .ToListAsync();
+
+            return Ok(categories);
         }
     }
 }
