@@ -2,6 +2,7 @@ import { Badge, Container, Nav, Navbar } from 'react-bootstrap'
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import BooksPage from './pages/BooksPage'
 import CartPage from './pages/CartPage'
+import AdminBooksPage from './pages/AdminBooksPage'
 import { useCart } from './context/CartContext'
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
             <Nav.Link as={NavLink} to="/books">
               Books
             </Nav.Link>
+            <Nav.Link as={NavLink} to="/admin/books">
+              Admin Books
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/cart">
               Cart{' '}
               {/* TA NOTE: New Bootstrap feature #2 (not covered in videos): Badge component for live cart count */}
@@ -32,6 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/books" replace />} />
           <Route path="/books" element={<BooksPage />} />
+          <Route path="/admin/books" element={<AdminBooksPage />} />
+          <Route path="/adminbooks" element={<AdminBooksPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Container>
