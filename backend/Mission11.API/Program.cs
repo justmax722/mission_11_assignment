@@ -60,9 +60,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: AllowFrontendPolicy, policy =>
     {
-        policy.WithOrigins(allowedOrigins)
-              .AllowAnyHeader()
-              .AllowAnyMethod();
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
     });
 });
 
