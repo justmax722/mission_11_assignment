@@ -578,11 +578,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 11\\backend\\Mission11.API\\Mission11.API.csproj",
+      "projectUniqueName": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 13\\mission_11_assignment\\backend\\Mission11.API\\Mission11.API.csproj",
       "projectName": "Mission11.API",
-      "projectPath": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 11\\backend\\Mission11.API\\Mission11.API.csproj",
+      "projectPath": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 13\\mission_11_assignment\\backend\\Mission11.API\\Mission11.API.csproj",
       "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 11\\backend\\Mission11.API\\obj\\",
+      "outputPath": "C:\\Users\\justi\\Desktop\\BYU\\IS 413\\Assignments\\Mission 13\\mission_11_assignment\\backend\\Mission11.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
