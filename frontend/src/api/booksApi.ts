@@ -53,7 +53,7 @@ export interface PagedResult<T> {
 
 const API_BASE_URL =
   (import.meta.env.VITE_API_BASE_URL as string | undefined) ??
-  'http://localhost:5001'
+  'https://mission-13-v4-bkgtcbhtekgzg3hf.australiasoutheast-01.azurewebsites.net'
 
 export async function getBooks(
   pageNumber: number,

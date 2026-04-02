@@ -64,3 +64,4 @@ C:\Users\justi\Desktop\BYU\IS 413\Assignments\Mission 11\backend\Mission11.API\o
 C:\Users\justi\Desktop\BYU\IS 413\Assignments\Mission 11\backend\Mission11.API\obj\Release\net10.0\Mission11.API.pdb
 C:\Users\justi\Desktop\BYU\IS 413\Assignments\Mission 11\backend\Mission11.API\obj\Release\net10.0\Mission11.API.genruntimeconfig.cache
 C:\Users\justi\Desktop\BYU\IS 413\Assignments\Mission 11\backend\Mission11.API\obj\Release\net10.0\ref\Mission11.API.dll
+C:\Users\justi\Desktop\BYU\IS 413\Assignments\Mission 11\backend\Mission11.API\bin\Release\net10.0\Bookstore.sqlite
