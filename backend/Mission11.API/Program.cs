@@ -38,7 +38,11 @@ if (allowedOrigins.Length == 0)
 
 if (allowedOrigins.Length == 0)
 {
-    allowedOrigins = new[] { "http://localhost:5173" };
+    allowedOrigins = new[]
+    {
+        "http://localhost:5173",
+        "https://lively-dune-0f9f0281e.2.azurestaticapps.net"
+    };
 }
 
 builder.Services.AddCors(options =>
